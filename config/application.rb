@@ -60,7 +60,7 @@ module Gallery
     config.assets.version = '1.0'
 
     # Precompiled Css
-    config.assets.precompile += ['home.css']
+    config.assets.precompile += ['home.css', 'style_768.css', 'style_1024.css', 'style_1280.css', 'style_retina.css']
 
   end
 end
