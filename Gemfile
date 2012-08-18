@@ -9,7 +9,9 @@ gem 'sqlite3-ruby', :group => :development
 
 gem 'activerecord-postgresql-adapter'
 
+#Bundle for authentication
 gem 'devise'
+gem 'cancan'
 
 #Image uploader
 gem "paperclip", "~> 3.0"
