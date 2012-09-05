@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f081272-e82b-4815-bfed-dd65b91d1ca7" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/alib/slides.jquery.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/slides/slides.jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gallery.iml" afterPath="$PROJECT_DIR$/.idea/gallery.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-    </list>
+    <list default="true" id="5f081272-e82b-4815-bfed-dd65b91d1ca7" name="Default" comment="" />
     <ignored path="gallery.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
