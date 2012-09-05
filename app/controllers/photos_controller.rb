@@ -25,7 +25,6 @@ class PhotosController < ApplicationController
   # GET /photos/new.json
   def new
     @photo = Photo.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @photo }
@@ -40,7 +39,11 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(params[:photo])
+    logger.info 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    @photo = Photo.new
+    @photo.name = params[:photo][:name]
+    @photo.desc = params[:photo][:desc]
+    @photo.filename = params[:photo][:imagefile].original_filename
 
     respond_to do |format|
       if @photo.save

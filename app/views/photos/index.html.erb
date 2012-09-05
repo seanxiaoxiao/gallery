@@ -3,7 +3,10 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Image</th>
+    <th>Filename</th>
+    <th>Created</th>
+    <th>Desc</th>
+    <th>Filepath</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,6 +15,10 @@
 <% @photos.each do |photo| %>
   <tr>
     <td><%= photo.name %></td>
+    <td><%= photo.filename %></td>
+    <td><%= photo.created_at %></td>
+    <td><%= photo.desc %></td>
+    <td><%= photo.filepath %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
     <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

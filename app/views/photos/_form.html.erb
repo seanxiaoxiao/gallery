@@ -16,8 +16,20 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br />
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :created %><br />
+    <%= f.datetime_select :created %>
+  </div>
+  <div class="field">
+    <%= f.label :filepath %><br />
+    <%= f.text_field :filepath %>
   </div>
   <div class="actions">
     <%= f.submit %>

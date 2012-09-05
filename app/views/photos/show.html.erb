@@ -1,8 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @photo.image.url %>
-<%= image_tag @photo.image.url(:medium) %>
-<%= image_tag @photo.image.url(:thumb) %>
+<p>
+  <b>Name:</b>
+  <%= @photo.name %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%= @photo.filename %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @photo.desc %>
+</p>
+
+<p>
+  <b>Created At:</b>
+  <%= @photo.created_at %>
+</p>
+
+<p>
+  <b>Filepath:</b>
+  <%= @photo.filepath %>
+</p>
+
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

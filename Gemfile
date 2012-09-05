@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -39,7 +39,7 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Deploy with Capistrano
+# Deploy with Capistrano                                                                                                                                 z
 # gem 'capistrano'
 
 # To use debugger
