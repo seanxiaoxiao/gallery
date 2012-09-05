@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f081272-e82b-4815-bfed-dd65b91d1ca7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/portfolio.rb" afterPath="$PROJECT_DIR$/app/models/portfolio.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/index.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/show.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-    </list>
+    <list default="true" id="5f081272-e82b-4815-bfed-dd65b91d1ca7" name="Default" comment="" />
     <ignored path="gallery.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
