@@ -13,8 +13,9 @@ gem 'activerecord-postgresql-adapter'
 gem 'devise'
 gem 'cancan'
 
-#Image uploader
-gem "paperclip", "~> 3.0"
+
+#Bootstrap
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/anjlab/bootstrap-rails.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
