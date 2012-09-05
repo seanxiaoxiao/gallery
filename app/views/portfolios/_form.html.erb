@@ -1,6 +1,6 @@
 <%= form_for(@portfolio) do |f| %>
   <% if @portfolio.errors.any? %>
-    <div id="error_explanation">
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html">
       <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
 
       <ul>
@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,5 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @data = APP_CONFIG['auth_users']
+    @portfolios = Portfolio.all
   end
 end

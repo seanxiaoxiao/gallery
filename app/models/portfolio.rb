@@ -1,3 +1,3 @@
 class Portfolio < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :name, :order
 end
