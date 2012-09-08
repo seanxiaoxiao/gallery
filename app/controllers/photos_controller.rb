@@ -24,6 +24,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
+    logger.info 'yyyyyy'
     @photo = Photo.new
     respond_to do |format|
       format.html # new.html.erb
@@ -39,15 +40,19 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    logger.info 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     @photo = Photo.new
     @photo.name = params[:photo][:name]
+    @photo.avatar = params[:photo][:path]
     @photo.desc = params[:photo][:desc]
-    @photo.filename = params[:photo][:imagefile].original_filename
+    @photo.filename = params[:photo][:original_filename]
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html {                                         #(html response is for browsers using iframe sollution)
+          render :json => [@photo.to_jq_upload].to_json,
+                 :content_type => 'text/html',
+                 :layout => false
+        }
         format.json { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }

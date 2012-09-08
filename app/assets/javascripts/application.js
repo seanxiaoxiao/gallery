@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
+
 //= require twitter/bootstrap/transition
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/modal
@@ -25,5 +27,16 @@
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/typeahead
 //= require twitter/bootstrap/affix
+
+//= require JQuery-File-Upload/jquery.ui.widget.js
+//= require JQuery-File-Upload/tmpl.min.js
+//= require JQuery-File-Upload/load-image.min.js
+//= require JQuery-File-Upload/canvas-to-blob.min.js
+//= require JQuery-File-Upload/jquery.iframe-transport.js
+//= require JQuery-File-Upload/jquery.fileupload.js
+//= require JQuery-File-Upload/jquery.fileupload-fp.js
+//= require JQuery-File-Upload/locale.js
+//= require JQuery-File-Upload/main.js
+
 //= require_directory ./slides
 //= require_directory .

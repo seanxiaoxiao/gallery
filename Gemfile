@@ -9,6 +9,10 @@ gem 'sqlite3-ruby', :group => :development
 
 gem 'activerecord-postgresql-adapter'
 
+gem 'mini_magick'
+gem 'carrierwave'
+
+
 #Bundle for authentication
 gem 'devise'
 gem 'cancan'
