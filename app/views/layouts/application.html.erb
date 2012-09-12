@@ -24,16 +24,17 @@
   <body>
     <header>
       <div class="banner">
-        Nanc's Gallery
       </div>
       <nav>
         <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><a href="" title="Portfolio">Portfolio</a></li>
-          <li><a href="" title="Blog">Blog</a></li>
-          <li><a href="" title="Contact">Contact</a></li>
+          <li><%= link_to "", root_path, :class => "home-link"%></li>
+          <li><%= link_to "", root_path, :class => "portfolio-link"%></li>
+          <li><%= link_to "", root_path, :class => "blog-link"%></li>
+          <li><%= link_to "", root_path, :class => "about-link"%></li>
+          <li><%= link_to "", root_path, :class => "contact-link"%></li>
         </ul>
       </nav>
+      <!--
       <div class="action">
         <% if current_user %>
           <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
@@ -43,9 +44,12 @@
           <%= link_to('登入', new_session_path(:user)) %>
         <% end %>
       </div>
+      -->
     </header>
     <%= yield %>
     <%= javascript_include_tag :application %>
+    <%= javascript_include_tag :uploader %>
+
   </body>
 </html>
 
