@@ -11,6 +11,7 @@
  *= require_self
  *= require jquery.fileupload-ui.css
  *= require twitter/bootstrap
+ *= require jquery.ui.all
  */
 
 //Reset
@@ -26,7 +27,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 body {
-  background-image: url("/assets/background.jpg");
+  background-image: url("/assets/background.png");
+  text-align: center;
   font: 12px/1.5 "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
 }
 
@@ -40,54 +42,80 @@ body {
 }
 
 nav {
-  width: 60%;
+  width: 565px;
+  height: 40px;
   margin: 0px auto;
 }
 
 nav li {
   display: block;
   float: left;
-  margin-right: 0.5em;
+  margin-right: 0.2em;
+  position: relative;
+}
+
+#portfolio-menu {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  z-index: 105;
+}
+
+#portfolio-menu li {
+  background-image: url("/assets/menu.png");
+  display: block;
+  width: 129px;
+  height: 37px;
+}
+
+.sub-menus span {
+  display: block;
+  margin-top: 8px;
 }
 
 .home-link {
   display: block;
-  height: 39px;
-  width: 131px;
+  height: 38px;
+  width: 101px;
   background-image: url('/assets/home-link.png');
 }
 
 .portfolio-link {
   display: block;
-  height: 36px;
-  width: 131px;
+  height: 38px;
+  width: 101px;
   background-image: url('/assets/portfolio-link.png');
 }
 
+
 .blog-link {
   display: block;
-  height: 37px;
-  width: 131px;
-  background-image: url('/assets/about-link.png');
+  height: 38px;
+  width: 101px;
+  background-image: url('/assets/blog-link.png');
 }
 
 .about-link {
   display: block;
-  height: 37px;
-  width: 131px;
+  height: 38px;
+  width: 101px;
   background-image: url('/assets/about-link.png');
 }
 
 .contact-link {
   display: block;
-  height: 37px;
-  width: 131px;
+  height: 38px;
+  width: 101px;
   background-image: url('/assets/contact-link.png');
 }
 
 .banner {
-  width: 355px;
-  height: 35px;
-  margin: 20px auto 20px auto;
+  width: 467px;
+  height: 51px;
+  margin: 35px auto 25px auto;
   background-image: url('/assets/logo.png');
+}
+
+.hidden {
+  display: none;
 }

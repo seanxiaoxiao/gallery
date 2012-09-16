@@ -28,11 +28,18 @@
       <nav>
         <ul>
           <li><%= link_to "", root_path, :class => "home-link"%></li>
-          <li><%= link_to "", root_path, :class => "portfolio-link"%></li>
+          <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
+            <ul id="portfolio-menu" class="hidden">
+              <li class=""><%= link_to "portrait" %></li>
+              <li class=""><%= link_to "wedding" %></li>
+              <li class=""><%= link_to "prewedding" %></li>
+            </ul>
+          </li>
           <li><%= link_to "", root_path, :class => "blog-link"%></li>
-          <li><%= link_to "", root_path, :class => "about-link"%></li>
           <li><%= link_to "", root_path, :class => "contact-link"%></li>
+          <li><%= link_to "", root_path, :class => "about-link"%></li>
         </ul>
+
       </nav>
       <!--
       <div class="action">

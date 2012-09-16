@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.ui.all
 
 //= require twitter/bootstrap/transition
 //= require twitter/bootstrap/alert
@@ -28,7 +29,19 @@
 //= require twitter/bootstrap/typeahead
 //= require twitter/bootstrap/affix
 
-
-
 //= require_directory ./slides
 //= require_directory .
+
+
+(function($) {
+    var menu = $("#portfolio-menu");
+    menu.addClass("hidden");
+    var portfolioList = $("#portfolio-li");
+    portfolioList.bind("mouseover", function() {
+        menu.attr("style", "");
+        menu.menu();
+    });
+    portfolioList.bind("mouseout", function() {
+        menu.attr("style", "display: none");
+    });
+})(jQuery);

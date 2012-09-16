@@ -1,12 +1,9 @@
 .container-16 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
+  margin: 0px auto;
+  width: 1024px;
+  display: block;
 }
 
-.container-16 .grid-16 {
-  width: 940px;
-}
 
 .container {
   width: 940px;
