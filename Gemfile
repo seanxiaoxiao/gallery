@@ -17,6 +17,11 @@ gem 'carrierwave'
 gem 'devise'
 gem 'cancan'
 
+#For testing
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 
 #Bootstrap
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/anjlab/bootstrap-rails.git'

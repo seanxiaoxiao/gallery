@@ -60,7 +60,7 @@ Gallery::Application.routes.draw do
   root :to => 'home#index'
 
   match 'portfolio/(:id).html' => 'home#portfolio', :as => "home_portfolio"
-  match 'album/(:id).html' => 'home#album'
+  match 'album/(:id).html' => 'home#album', :as => "home_album"
 
   # See how all your routes lay out with "rake routes"
 
