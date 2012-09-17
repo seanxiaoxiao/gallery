@@ -130,3 +130,87 @@
   text-shadow:none;
 }
 
+.long-divide {
+  display: block;
+  width: 854px;
+  height: 3px;
+  margin: 25px auto ;
+  background-image: url("/assets/long-divide.png");
+}
+
+.short-divide {
+  display: block;
+  width: 123px;
+  height: 3px;
+  margin: 30px auto 25px auto;
+  background-image: url("/assets/short-divide.png");
+}
+
+.portfolio-name {
+  font-family: "Rage Italic";
+  font-size: 48px;
+  display: block;
+  line-height: 55px;
+  color: #e8e8e8;
+  text-shadow: 4px 4px 4px #777;
+}
+
+.album-list {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.album-records {
+  width: 854px;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.album-record {
+  float: left;
+  overflow: hidden;
+  zoom: 1;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  margin-bottom: 1em;
+  box-shadow:5px 5px 10px #444;
+}
+
+.album-record:hover {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.page-enable {
+  display: block;
+  width: 13px;
+  height: 14px;
+  float: left;
+  margin-right: 1em;
+  background-image: url("/assets/page-enable.png");
+}
+
+.page-disable {
+  display: block;
+  width: 13px;
+  height: 14px;
+  float: left;
+  margin-right: 1em;
+  background-image: url("/assets/page-disable.png");
+}
+
+.album-paging {
+  display: block;
+  overflow:hidden;
+  zoom:1;
+  margin: 0 auto 30px auto;
+}
+
+#galleria {
+  height:800px
+}
+

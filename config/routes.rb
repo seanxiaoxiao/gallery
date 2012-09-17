@@ -59,6 +59,9 @@ Gallery::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'home#index'
 
+  match 'portfolio/(:id).html' => 'home#portfolio', :as => "home_portfolio"
+  match 'album/(:id).html' => 'home#album'
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

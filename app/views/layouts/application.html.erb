@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Nanc's Gallery</title>
-    <meta name="description" content="Nanc's Gallery">
+    <meta name="description" content="NanC Gallery">
     <meta name="author" content="Sean Lionheart">
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1">
     <%= stylesheet_link_tag :application %>
@@ -24,15 +24,16 @@
   <body>
     <header>
       <div class="banner">
+        <%= link_to "", root_path %>
       </div>
       <nav>
         <ul>
           <li><%= link_to "", root_path, :class => "home-link"%></li>
           <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
             <ul id="portfolio-menu" class="hidden">
-              <li class=""><%= link_to "portrait" %></li>
-              <li class=""><%= link_to "wedding" %></li>
-              <li class=""><%= link_to "prewedding" %></li>
+              <% for portfolio in @portfolios %>
+                <li class=""><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
+              <% end %>
             </ul>
           </li>
           <li><%= link_to "", root_path, :class => "blog-link"%></li>

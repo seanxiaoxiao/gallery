@@ -12,6 +12,7 @@
  *= require jquery.fileupload-ui.css
  *= require twitter/bootstrap
  *= require jquery.ui.all
+ *= require galleria.classic.css
  */
 
 //Reset
@@ -50,7 +51,7 @@ nav {
 nav li {
   display: block;
   float: left;
-  margin-right: 0.2em;
+  margin-right: 0.1em;
   position: relative;
 }
 
@@ -64,8 +65,15 @@ nav li {
 #portfolio-menu li {
   background-image: url("/assets/menu.png");
   display: block;
-  width: 129px;
-  height: 37px;
+  width: 120px;
+  height: 34px;
+  font-family: "Garamond";
+}
+
+#portfolio-menu a {
+  margin-top: 2px;
+  color: #fff;
+
 }
 
 .sub-menus span {
@@ -116,6 +124,19 @@ nav li {
   background-image: url('/assets/logo.png');
 }
 
+.banner a {
+  display: block;
+  height: 51px;
+}
+
 .hidden {
   display: none;
+}
+
+@font-face {
+  font-family: 'Rage Italic';
+  src: url('/assets/rage.ttf');
+  src: local('☺'), url('/assets/rage.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
