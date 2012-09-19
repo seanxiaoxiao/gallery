@@ -3027,8 +3027,8 @@ Galleria.prototype = {
                 $container.css( 'visibility', 'hidden' );
 
                 thumb.data = {
-                    width  : Utils.parseValue( getStyle( 'width' ) ),
-                    height : Utils.parseValue( getStyle( 'height' ) ),
+                    width  : Utils.parseValue( getStyle( 'width' ) ) / 40 * 100,
+                    height : Utils.parseValue( getStyle( 'height' ) ) / 40 * 100,
                     order  : i,
                     src    : src
                 };

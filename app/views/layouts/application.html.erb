@@ -26,22 +26,23 @@
       <div class="banner">
         <%= link_to "", root_path %>
       </div>
-      <nav>
-        <ul>
-          <li><%= link_to "", root_path, :class => "home-link"%></li>
-          <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
-            <ul id="portfolio-menu" class="hidden">
-              <% for portfolio in @portfolios %>
-                <li class=""><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
-              <% end %>
-            </ul>
-          </li>
-          <li><%= link_to "", root_path, :class => "blog-link"%></li>
-          <li><%= link_to "", root_path, :class => "contact-link"%></li>
-          <li><%= link_to "", root_path, :class => "about-link"%></li>
-        </ul>
-
-      </nav>
+      <% unless @portfolio.blank? %>
+        <nav>
+          <ul>
+            <li><%= link_to "", root_path, :class => "home-link"%></li>
+            <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
+              <ul id="portfolio-menu" class="hidden">
+                <% for portfolio in @portfolios %>
+                  <li class=""><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
+                <% end %>
+              </ul>
+            </li>
+            <li><%= link_to "", root_path, :class => "blog-link"%></li>
+            <li><%= link_to "", root_path, :class => "contact-link"%></li>
+            <li><%= link_to "", root_path, :class => "about-link"%></li>
+          </ul>
+        </nav>
+      <% end %>
       <!--
       <div class="action">
         <% if current_user %>

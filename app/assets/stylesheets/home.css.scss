@@ -134,7 +134,7 @@
   display: block;
   width: 854px;
   height: 3px;
-  margin: 25px auto ;
+  margin: 25px auto 15px auto;
   background-image: url("/assets/long-divide.png");
 }
 
@@ -211,6 +211,7 @@
 }
 
 #galleria {
-  height:800px
+  height:800px;
+  width: 980px;
+  margin: 0 auto;
 }
-

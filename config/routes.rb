@@ -1,5 +1,7 @@
 Gallery::Application.routes.draw do
 
+  resources :slides
+
   resources :albums
 
   resources :portfolios

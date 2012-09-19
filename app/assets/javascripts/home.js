@@ -64,9 +64,15 @@ jQuery((function($) {
 
     if ($('#galleria').length > 0) {
         // Load the classic theme
-        Galleria.loadTheme('/assets/galleria/galleria.classic.js');
+        //Galleria.loadTheme('/assets/galleria/galleria.classic.js');
 
         // Initialize Galleria
-        Galleria.run('#galleria');
+        Galleria.run('#galleria', {
+            thumbQuality: true,
+            maxScaleRatio: 1,
+            minScaleRatio: 1,
+            height: 720,
+            width: 980
+        });
     }
 })(jQuery));
