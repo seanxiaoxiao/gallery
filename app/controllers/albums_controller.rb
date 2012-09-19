@@ -25,7 +25,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new.json
   def new
     @album = Album.new
-
+    @portfolios = Portfolio.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @album }
@@ -34,6 +34,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1/edit
   def edit
+    @portfolios = Portfolio.all
     @album = Album.find(params[:id])
   end
 

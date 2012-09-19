@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :portfolio %><br />
-    <%= f.text_field :portfolio %>
+    <%= f.select :portfolio, Portfolio.select_options, :selected => params[:portfolio_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

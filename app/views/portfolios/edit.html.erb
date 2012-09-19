@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
+<%= link_to 'Add Album', new_album_path(:portfolio_id => @portfolio.id)  %> |
 <%= link_to 'Show', @portfolio %> |
 <%= link_to 'Back', portfolios_path %>

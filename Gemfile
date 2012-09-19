@@ -15,7 +15,6 @@ gem 'carrierwave'
 
 #Bundle for authentication
 gem 'devise'
-gem 'cancan'
 
 #For testing
 group :development, :test do

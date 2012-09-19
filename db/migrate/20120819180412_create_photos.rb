@@ -4,7 +4,6 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :name
       t.string :filename
       t.string :desc
-      t.datetime :created
       t.string :filepath
 
       t.timestamps
