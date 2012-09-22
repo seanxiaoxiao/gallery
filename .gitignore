@@ -18,3 +18,4 @@
 **/*.swp
 .DS_Store
 .idea
+public/upload
