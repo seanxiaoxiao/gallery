@@ -25,9 +25,9 @@ class SlidesController < ApplicationController
   # GET /slides/new.json
   def new
     @slide = Slide.new
-
+    @slide.save()
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { redirect_to :action => "show", :id => @slide.id }
       format.json { render json: @slide }
     end
   end
@@ -35,22 +35,6 @@ class SlidesController < ApplicationController
   # GET /slides/1/edit
   def edit
     @slide = Slide.find(params[:id])
-  end
-
-  # POST /slides
-  # POST /slides.json
-  def create
-    @slide = Slide.new(params[:slide])
-
-    respond_to do |format|
-      if @slide.save
-        format.html { redirect_to @slide, notice: 'Slide was successfully created.' }
-        format.json { render json: @slide, status: :created, location: @slide }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @slide.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PUT /slides/1
@@ -79,5 +63,24 @@ class SlidesController < ApplicationController
       format.html { redirect_to slides_url }
       format.json { head :no_content }
     end
+  end
+
+  def upload_photo
+    @slide = Slide.find(params[:id])
+    files = params[:files]
+
+    upload_response_list = []
+
+    files.each do |file|
+      photo = Photo.new
+      desc = ""
+      photo.create_photo(file, desc)
+      photo.slide = @slide
+      photo.save()
+      upload_response_list << photo.upload_response()
+    end
+
+    render :json => upload_response_list
+
   end
 end

@@ -1,6 +1,9 @@
+
+
 class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
+
   def index
     @albums = Album.all
 
@@ -8,6 +11,25 @@ class AlbumsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @albums }
     end
+  end
+
+  def upload_photo
+    @album = Album.find(params[:id])
+    files = params[:files]
+
+    upload_response_list = []
+
+    files.each do |file|
+      photo = Photo.new
+      desc = ""
+      photo.create_photo(file, desc)
+      photo.album = @album
+      photo.save()
+      upload_response_list << photo.upload_response()
+    end
+
+    render :json => upload_response_list
+
   end
 
   # GET /albums/1

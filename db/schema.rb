@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919154431) do
+ActiveRecord::Schema.define(:version => 20120921220157) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120919154431) do
     t.string   "filepath"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "album_id"
   end
 
   create_table "portfolios", :force => true do |t|
