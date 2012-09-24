@@ -16,6 +16,8 @@ gem 'rmagick'
 
 gem 'will_paginate'
 
+gem 'thin'
+
 #For testing
 group :development, :test do
   gem 'rspec-rails'
