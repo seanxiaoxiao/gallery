@@ -16,6 +16,8 @@ gem 'fileutils'
 
 gem 'rmagick'
 
+gem 'will_paginate'
+
 #For testing
 group :development, :test do
   gem 'rspec-rails'

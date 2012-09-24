@@ -8,27 +8,21 @@
   </div>
   <div class="album-list">
     <div class="album-records">
+      <% @albums.each do |album| %>
       <div class="album-record">
-        <a href=""><img src="/assets/thumbnail1.jpg"></a>
+        <%= link_to image_tag(album.cover.cover_thumbnail_url), home_album_path(album) %>
       </div>
-      <div class="album-record">
-        <a href=""><img src="/assets/thumbnail2.jpg"></a>
-      </div>
-      <div class="album-record">
-        <a href=""><img src="/assets/thumbnail3.jpg"></a>
-      </div>
-      <div class="album-record">
-        <a href=""><img src="/assets/thumbnail4.jpg"></a>
-      </div>
-      <div class="album-record">
-        <a href=""><img src="/assets/thumbnail5.jpg"></a>
-      </div>
-      <div class="album-record">
-        <a href=""><img src="/assets/thumbnail6.jpg"></a>
-      </div>
+      <% end %>
     </div>
     <div class="album-paging">
     </div>
   </div>
 
 </div>
+
+<script type="text/javascript">
+    var NANC = NANC || {};
+    NANC.pageCount = <%= @page_count %>;
+    NANC.currentPage = <%= @current_page %>;
+    NANC.currentPortfolioId = <%= @portfolio.id %>;
+</script>

@@ -15,20 +15,24 @@ class AlbumsController < ApplicationController
 
   def upload_photo
     @album = Album.find(params[:id])
-    files = params[:files]
-
-    upload_response_list = []
-
-    files.each do |file|
-      photo = Photo.new
-      desc = ""
-      photo.create_photo(file, desc)
-      photo.album = @album
-      photo.save()
-      upload_response_list << photo.upload_response()
+    if request.post?
+      files = params[:files]
+      upload_response_list = []
+      files.each do |file|
+        photo = Photo.new
+        desc = ""
+        photo.create_photo(file, desc)
+        @album.add_photo(photo)
+        upload_response_list << photo.upload_response()
+      end
+      render :json => upload_response_list
+    elsif request.get?
+      upload_response_list = []
+      @album.photos.each do |photo|
+        upload_response_list << photo.upload_response
+      end
+      render :json => upload_response_list
     end
-
-    render :json => upload_response_list
 
   end
 
@@ -41,6 +45,10 @@ class AlbumsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @album }
     end
+  end
+
+  def show_by_page
+    @album = Album.find(params[:id])
   end
 
   # GET /albums/new
@@ -98,7 +106,7 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1.json
   def destroy
     @album = Album.find(params[:id])
-    @album.destroy
+    @album.delete
 
     respond_to do |format|
       format.html { redirect_to albums_url }

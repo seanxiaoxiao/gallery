@@ -43,40 +43,11 @@
             <li><%= link_to "", root_path, :class => "about-link"%></li>
           </ul>
         </nav>
-
-      <div class="action">
-        <% if current_user %>
-          <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
-          <%= link_to('修改密碼', edit_registration_path(:user)) %>
-        <% else %>
-          <%= link_to('註冊', new_registration_path(:user)) %> |
-          <%= link_to('登入', new_session_path(:user)) %>
-        <% end %>
-      </div>
-
-
     </header>
-    <%= yield %>
+    <div class="container-16">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag :application %>
-    <script src="/assets/uploader/tmpl.js" type="text/javascript"></script>
-    <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js" type="text/javascript"></script>
-    <script src="/assets/uploader/jquery.iframe-transport.js" type="text/javascript"></script>
-    <script src="/assets/uploader/jquery.fileupload.js" type="text/javascript"></script>
-    <script src="/assets/uploader/jquery.fileupload-ui.js" type="text/javascript"></script>
-
-
-    <script src="/assets/uploader/jquery.iframe-transport.js"></script>
-    <!-- The basic File Upload plugin -->
-    <script src="/assets/uploader/jquery.fileupload.js"></script>
-    <!-- The File Upload file processing plugin -->
-    <script src="/assets/uploader/jquery.fileupload-fp.js"></script>
-    <!-- The File Upload user interface plugin -->
-    <script src="/assets/uploader/jquery.fileupload-ui.js"></script>
-    <!-- The localization script -->
-    <script src="/assets/uploader/locale.js"></script>
-    <!-- The main application script -->
-    <script src="/assets/uploader/main.js"></script>
-
   </body>
 </html>
 

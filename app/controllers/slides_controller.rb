@@ -67,20 +67,24 @@ class SlidesController < ApplicationController
 
   def upload_photo
     @slide = Slide.find(params[:id])
-    files = params[:files]
-
-    upload_response_list = []
-
-    files.each do |file|
-      photo = Photo.new
-      desc = ""
-      photo.create_photo(file, desc)
-      photo.slide = @slide
-      photo.save()
-      upload_response_list << photo.upload_response()
+    if request.post?
+      files = params[:files]
+      upload_response_list = []
+      files.each do |file|
+        photo = Photo.new
+        desc = ""
+        photo.create_photo(file, desc)
+        photo.slide = @slide
+        photo.save()
+        upload_response_list << photo.upload_response()
+      end
+      render :json => upload_response_list
+    elsif request.get?
+      uploaded = []
+      if (@slide.photo != nil)
+        uploaded << @slide.photo.upload_response
+      end
+      render :json => uploaded
     end
-
-    render :json => upload_response_list
-
   end
 end

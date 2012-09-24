@@ -134,7 +134,7 @@
   display: block;
   width: 854px;
   height: 3px;
-  margin: 25px auto 15px auto;
+  margin: 15px auto 0px auto;
   background-image: url("/assets/long-divide.png");
 }
 
@@ -142,7 +142,7 @@
   display: block;
   width: 123px;
   height: 3px;
-  margin: 30px auto 25px auto;
+  margin: 20px auto 15px auto;
   background-image: url("/assets/short-divide.png");
 }
 
@@ -158,12 +158,13 @@
 .album-list {
   width: 980px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   zoom: 1;
 }
 
 .album-records {
   width: 854px;
+  height: 528px;
   margin: 0 auto 20px auto;
   overflow: hidden;
   zoom: 1;
@@ -199,7 +200,7 @@
   width: 13px;
   height: 14px;
   float: left;
-  margin-right: 1em;
+  margin-right: 0.7em;
   background-image: url("/assets/page-disable.png");
 }
 
@@ -211,7 +212,7 @@
 }
 
 #galleria {
-  height:800px;
   width: 980px;
   margin: 0 auto;
 }
+

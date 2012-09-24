@@ -20,6 +20,14 @@
 //= require twitter/bootstrap
 
 //= require_directory ./slides
+
+//= require uploader/tmpl.js
+//= require uploader/load-image.min.js
+//= require uploader/jquery.iframe-transport.js
+//= require uploader/jquery.fileupload.js
+//= require uploader/jquery.fileupload-fp.js
+//= require uploader/jquery.fileupload-ui.js
+//= require uploader/locale.js
 //= require_directory .
 
 

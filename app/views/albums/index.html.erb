@@ -1,18 +1,19 @@
+
 <h1>Listing albums</h1>
 
-<table>
+<table class='table'>
   <tr>
     <th>name</th>
     <th>Portfolio</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
   </tr>
 
 <% @albums.each do |album| %>
   <tr>
     <td><%= album.name %></td>
-    <td><%= album.portfolio %></td>
+    <td><%= album.portfolio.name %></td>
     <td><%= link_to 'Show', album %></td>
     <td><%= link_to 'Edit', edit_album_path(album) %></td>
     <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>

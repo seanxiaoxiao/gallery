@@ -81,7 +81,7 @@ class PhotosController < ApplicationController
   # DELETE /photos/1.json
   def destroy
     @photo = Photo.find(params[:id])
-    @photo.destroy
+    @photo.delete
 
     respond_to do |format|
       format.html { redirect_to photos_url }

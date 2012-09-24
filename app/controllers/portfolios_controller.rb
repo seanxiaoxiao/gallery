@@ -73,7 +73,7 @@ class PortfoliosController < ApplicationController
   # DELETE /portfolios/1.json
   def destroy
     @portfolio = Portfolio.find(params[:id])
-    @portfolio.destroy
+    @portfolio.delete
 
     respond_to do |format|
       format.html { redirect_to portfolios_url }

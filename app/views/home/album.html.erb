@@ -2,133 +2,18 @@
   <div class="portfolio-head">
     <div class="short-divide"></div>
     <div class="portfolio-name">
-      <%= @portfolio.name %>
+      <%= @album.name %>
     </div>
     <div class="long-divide"></div>
   </div>
 
   <div id="galleria">
-
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/thumbnail1.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/thumbnail1.jpg">
-    </a>
-    <a href="/assets/thumbnail2.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/thumbnail2.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-    <a href="/assets/photo.jpg">
-      <img data-title="Locomotives Roundhouse"
-           data-description="Steam locomotives of the Chicago &amp; North Western Railway."
-           src="/assets/photo.jpg">
-    </a>
-
+    <% @album.photos.each do |photo| %>
+      <a href="<%= photo.photo_url %>">
+        <img data-title="<%= photo.name %>"
+               data-description=""
+               src="<%= photo.slide_thumbnail_url %>">
+      </a>
+    <% end %>
   </div>
 </div>

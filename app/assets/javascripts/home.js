@@ -2,7 +2,184 @@
 //# All this logic will automatically be available in application.js.
 //# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+var NANC = NANC || {};
+
+(function($) {
+
+    NANC.SlideUpload = function() {
+        'use strict';
+
+        // Initialize the jQuery File Upload widget:
+        $('#fileupload').fileupload();
+
+        // Enable iframe cross-domain access via redirect option:
+        $('#fileupload').fileupload(
+            'option',
+            'redirect',
+            window.location.href.replace(
+                /\/[^\/]*$/,
+                '/cors/result.html?%s'
+            )
+        );
+
+        var me = this;
+        me.uploadButton = $("#slide-upload .fileinput-button");
+
+        $('#fileupload').bind('fileuploaddestroy', me.enableUpload());
+        $('#fileupload').bind('fileuploadfailed', me.enableUpload());
+        $('#fileupload').bind('fileuploadstopped', me.enableUpload());
+
+        // Load existing files:
+        $('#fileupload').each(function () {
+            var that = this;
+            $.getJSON(this.action, function (result) {
+                if (result && result.length) {
+                    $(that).fileupload('option', 'done').call(that, null, {result: result});
+                    if ($(that).find("tr").length > 0) {
+                        me.disableUpload()();
+                    }
+                }
+            });
+        });
+        $('#fileupload').bind('fileuploadadd', me.disableUpload());
+    };
+
+    NANC.SlideUpload.prototype = {
+
+        disableUpload: function(e) {
+            var me = this;
+            return function() {
+                me.uploadButton.addClass('hidden');
+            };
+        },
+
+        enableUpload: function(e) {
+            var me = this;
+            return function() {
+                me.uploadButton.removeClass('hidden');
+            }
+        }
+    };
+
+    NANC.AlbumUpload = function() {
+        'use strict';
+
+        // Initialize the jQuery File Upload widget:
+        $('#fileupload').fileupload();
+
+        // Enable iframe cross-domain access via redirect option:
+        $('#fileupload').fileupload(
+            'option',
+            'redirect',
+            window.location.href.replace(
+                /\/[^\/]*$/,
+                '/cors/result.html?%s'
+            )
+        );
+
+        var me = this;
+        me.uploadButton = $("#slide-upload .fileinput-button");
+
+        // Load existing files:
+        $('#fileupload').each(function () {
+            var that = this;
+            $.getJSON(this.action, function (result) {
+                if (result && result.length) {
+                    $(that).fileupload('option', 'done').call(that, null, {result: result});
+                }
+            });
+        });
+    };
+
+    NANC.PortfolioPage = function() {
+        var me = this;
+        me.currentPage = NANC.currentPage;
+        me.paging = $(".album-paging");
+        me.paging.attr("style", "width: " + (NANC.pageCount) * 28 + "px");
+
+        if (me.paging.length > 0) {
+            me.paging.paging(NANC.pageCount, {
+                onFormat: function() {
+                    if (this.value != this.page) {
+                        return "<a class='page-enable'></a>";
+                    }
+                    else {
+                        return "<a class='page-disable'></a>";
+                    }
+                },
+                onSelect: function(page) {
+                    if (me.currentPage != page) {
+                        $.ajax({
+                            type: "GET",
+                            url: "/portfolio/" + NANC.currentPortfolioId + "/albums/" + page,
+                            success: function(data) {
+                                me.currentPage = page;
+                                me.removePage(data);
+                            }
+                        });
+                    }
+                },
+                format: '*',
+                perpage: 1,
+                page: 1
+            });
+        }
+    };
+
+    NANC.PortfolioPage.prototype = {
+
+        removePage: function(data) {
+            var me = this;
+            $(".album-records").fadeOut(500, function() {
+                me.showPage(data);
+            });
+        },
+
+        showPage: function(data) {
+            $(".album-records .album-record").remove();
+            for (var i in data) {
+                var div = $("<div>").addClass("album-record");
+                var a = $("<a>").attr("href", "/album/" + data[i]["id"] + ".html");
+                var img = $("<img>").attr("src", data[i]["cover_url"]);
+                $(div).append(a);
+                $(a).append(img);
+                $(".album-records").append(div);
+            }
+            $(".album-records").fadeIn(500);
+
+        }
+    };
+
+    NANC.portfolioMenu = function() {
+        var menu = $("#portfolio-menu");
+        menu.menu();
+        menu.attr("style", "display: none");
+        menu.removeClass("hidden");
+        $.each(menu.find("a"), function(index, element) {
+            $(element).bind("click", function() {
+                window.location = $(element).attr("href");
+            });
+        })
+
+        var portfolioList = $("#portfolio-li");
+        portfolioList.bind("mouseover", function() {
+            menu.attr("style", "");
+
+        });
+        portfolioList.bind("mouseout", function() {
+            menu.attr("style", "display: none");
+        });
+    };
+
+    NANC.portfolioMenu.prototype = {
+
+    };
+
+}(jQuery));
+
+
 jQuery((function($) {
+
     $('#slides').slides({
         preload: true,
         play: 5000,
@@ -26,40 +203,18 @@ jQuery((function($) {
         }
     });
 
-    var menu = $("#portfolio-menu");
-    menu.menu();
-    menu.attr("style", "display: none");
-    $.each(menu.find("a"), function(index, element) {
-        $(element).bind("click", function() {
-            window.location = $(element).attr("href");
-        });
-    })
-    var portfolioList = $("#portfolio-li");
-    portfolioList.bind("mouseover", function() {
-        menu.attr("style", "");
+    new NANC.portfolioMenu();
 
-    });
-    portfolioList.bind("mouseout", function() {
-        menu.attr("style", "display: none");
-    });
+    if ($('#slide-upload').length == 1) {
+        NANC.SlideUploadObj = new NANC.SlideUpload();
+    }
 
-    var paging = $(".album-paging");
-    var pageCount = 20;
-    paging.attr("style", "width: " + pageCount * 28 + "px");
-    if (paging.length > 0) {
-        paging.paging(pageCount, {
-            onFormat: function() {
-                if (this.value != this.page) {
-                    return "<a class='page-enable'></a>";
-                }
-                else {
-                    return "<a class='page-disable'></a>";
-                }
-            },
-            format: '*',
-            perpage: 1,
-            page:1
-        });
+    if ($('#album-upload').length == 1) {
+        NANC.AlubmUploadObj = new NANC.AlbumUpload();
+    }
+
+    if ($('.album-paging').length == 1) {
+        NANC.pagingObj = new NANC.PortfolioPage();
     }
 
     if ($('#galleria').length > 0) {
@@ -71,8 +226,12 @@ jQuery((function($) {
             thumbQuality: true,
             maxScaleRatio: 1,
             minScaleRatio: 1,
-            height: 720,
+            height: 800,
+            showInfo: false,
             width: 980
         });
     }
+
+
 })(jQuery));
+

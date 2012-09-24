@@ -2,24 +2,15 @@
   <div class='gallery-panel'>
     <div id="slides">
       <div class="slides_container">
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-1.jpg" alt="Slide 1"></a>
-        </div>
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/stephangeyer/3020487807/" title="Taxi | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-2.jpg" alt="Slide 2"></a>
-        </div>
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/childofwar/2984345060/" title="Happy Bokeh raining Day | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-3.jpg" alt="Slide 3"></a>
-        </div>
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/b-tal/117037943/" title="We Eat Light | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-4.jpg" alt="Slide 4"></a>
-        </div>
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/b-tal/117037943/" title="We Eat Light | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-5.jpg" alt="Slide 5"></a>
-        </div>
-        <div class="slide">
-          <a href="http://www.flickr.com/photos/b-tal/117037943/" title="We Eat Light | Flickr - Photo Sharing!" target="_blank"><img src="/assets/slide-6.jpg" alt="Slide 6"></a>
-        </div>
+        <% if @slides.count > 0 %>
+          <% @slides.each do |slide| %>
+            <% if slide.photo %>
+              <div class="slide">
+                <a href="javascript:void(0);" title="<%= slide.photo.name %>" target="_blank"><img src="<%= slide.photo.photo_url %>" alt="Slide 1"></a>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
       <a href="#" class="prev"><img src="/assets/arrow-prev.png"></a>
       <a href="#" class="next"><img src="/assets/arrow-next.png"></a>

@@ -1,14 +1,12 @@
 <%= form_for(@portfolio) do |f| %>
   <% if @portfolio.errors.any? %>
-        <div id="error_explanation" xmlns="http://www.w3.org/1999/html">
-      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
-
-      <ul>
+    <div id="error_explanation" xmlns="http://www.w3.org/1999/html">
+      <h3><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h3>
       <% @portfolio.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <span class="label label-important"><%= msg %></span>
       <% end %>
-      </ul>
     </div>
+    </br>
   <% end %>
 
   <div class="field">

@@ -62,9 +62,10 @@ Gallery::Application.routes.draw do
   root :to => 'home#index'
 
   match 'portfolio/(:id).html' => 'home#portfolio', :as => "home_portfolio"
+  match 'portfolio/(:id)/albums/(:page)' => 'home#albums_in_portfolio'
   match 'album/(:id).html' => 'home#album', :as => "home_album"
-  match 'album/(:id)/upload_photo' => 'albums#upload_photo', :via => [:post]
-  match 'slide/(:id)/upload_photo' => 'slides#upload_photo', :via => [:post]
+  match 'album/(:id)/upload_photo' => 'albums#upload_photo', :via => [:post, :get]
+  match 'slide/(:id)/upload_photo' => 'slides#upload_photo', :via => [:post, :get]
 
   # See how all your routes lay out with "rake routes"
 
