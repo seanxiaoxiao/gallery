@@ -1,4 +1,4 @@
-class SlidesController < ApplicationController
+class SlidesController < AdminController
   # GET /slides
   # GET /slides.json
   def index

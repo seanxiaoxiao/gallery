@@ -47,6 +47,11 @@
     <div class="container-16">
       <%= yield %>
     </div>
+    <div class="container">
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+      <% end %>
+    </div>
     <%= javascript_include_tag :application %>
   </body>
 </html>

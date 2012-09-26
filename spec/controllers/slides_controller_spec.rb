@@ -36,9 +36,9 @@ describe SlidesController do
 
   describe "GET index" do
     it "assigns all slides as @slides" do
-      slide = Slide.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:slides).should eq([slide])
+      slides = Slide.all
+      get :index
+      assigns(:slides).should eq(slides)
     end
   end
 
@@ -47,13 +47,6 @@ describe SlidesController do
       slide = Slide.create! valid_attributes
       get :show, {:id => slide.to_param}, valid_session
       assigns(:slide).should eq(slide)
-    end
-  end
-
-  describe "GET new" do
-    it "assigns a new slide as @slide" do
-      get :new, {}, valid_session
-      assigns(:slide).should be_a_new(Slide)
     end
   end
 

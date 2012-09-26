@@ -1,4 +1,4 @@
-class PhotosController < ApplicationController
+class PhotosController < AdminController
   # GET /photos
   # GET /photos.json
   def index
@@ -24,7 +24,6 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
-    logger.info 'yyyyyy'
     @photo = Photo.new
     respond_to do |format|
       format.html # new.html.erb

@@ -1,5 +1,7 @@
 Gallery::Application.routes.draw do
 
+  devise_for :users
+
   resources :slides
 
   resources :albums
@@ -7,8 +9,6 @@ Gallery::Application.routes.draw do
   resources :portfolios
 
   resources :photos
-
-  devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

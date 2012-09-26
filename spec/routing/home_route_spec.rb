@@ -14,4 +14,10 @@ describe HomeController do
     get("/album/1.html").should route_to("home#album", :id => "1")
   end
 
+  it "routes to get albums in a portfolio by page" do
+    get("portfolio/1/albums/2").should route_to("home#albums_in_portfolio", :id => "1", :page => "2")
+  end
+
+
+
 end

@@ -1,4 +1,4 @@
-class PortfoliosController < ApplicationController
+class PortfoliosController < AdminController
   # GET /portfolios
   # GET /portfolios.json
   def index
