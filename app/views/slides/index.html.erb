@@ -1,5 +1,7 @@
 <h1>Listing slides</h1>
 
+<%= link_to 'New Slide', new_slide_path %>
+
 <table class="table">
 <% @slides.each do |slide| %>
   <tr>
@@ -14,6 +16,3 @@
   </tr>
 <% end %>
 </table>
-
-
-<%= link_to 'New Slide', new_slide_path %>

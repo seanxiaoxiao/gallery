@@ -1,7 +1,8 @@
 class Album < ActiveRecord::Base
   attr_accessible :name
   belongs_to :portfolio
-  has_many :photos
+  has_many :photos, :dependent => :destroy
+  accepts_nested_attributes_for :photos, :reject_if => lambda { |photos| photos.blank? }, :allow_destroy => true
 
   validates :name, :presence => true, :uniqueness => true
 
@@ -12,13 +13,6 @@ class Album < ActiveRecord::Base
 
   def cover
     return self.photos.length > 0 ? self.photos[0] : nil
-  end
-
-  def delete
-    self.photos.each do |photo|
-      photo.delete
-    end
-    self.destroy
   end
 
   def to_response

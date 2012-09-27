@@ -107,7 +107,7 @@ class AlbumsController < AdminController
   # DELETE /albums/1.json
   def destroy
     @album = Album.find(params[:id])
-    @album.delete
+    @album.destroy
 
     respond_to do |format|
       format.html { redirect_to albums_url }

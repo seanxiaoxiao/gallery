@@ -1,9 +1,6 @@
 class Slide < ActiveRecord::Base
   # attr_accessible :title, :body
-  has_one :photo
+  has_one :photo, :dependent => :destroy
+  accepts_nested_attributes_for :photo, :reject_if => lambda { |p| p.blank? }, :allow_destroy => true
 
-  def delete
-    self.photo.delete
-    self.destroy
-  end
 end

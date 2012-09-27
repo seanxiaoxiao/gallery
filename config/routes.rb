@@ -8,8 +8,6 @@ Gallery::Application.routes.draw do
 
   resources :portfolios
 
-  resources :photos
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -66,6 +64,7 @@ Gallery::Application.routes.draw do
   match 'album/(:id).html' => 'home#album', :as => "home_album"
   match 'album/(:id)/upload_photo' => 'albums#upload_photo', :via => [:post, :get]
   match 'slide/(:id)/upload_photo' => 'slides#upload_photo', :via => [:post, :get]
+  match 'api/album/(:album_id)' => 'apis#album', :via => [:get]
 
   # See how all your routes lay out with "rake routes"
 

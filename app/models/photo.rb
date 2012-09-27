@@ -96,12 +96,20 @@ class Photo < ActiveRecord::Base
     return File.join("/photos", self.id.to_s)
   end
 
-  def delete
-    self.destroy
-    FileUtils.remove(self.photo_path)
-    FileUtils.remove(self.grid_thumbnail_path)
-    FileUtils.remove(self.slide_thumbnail_path)
-    FileUtils.remove(self.cover_thumbnail_path)
+  def destroy
+    if File.exist?(self.photo_path)
+      FileUtils.remove(self.photo_path)
+    end
+    if File.exist?(self.grid_thumbnail_path)
+      FileUtils.remove(self.grid_thumbnail_path)
+    end
+    if File.exist?(self.slide_thumbnail_path)
+      FileUtils.remove(self.slide_thumbnail_path)
+    end
+    if File.exist?(self.cover_thumbnail_path)
+      FileUtils.remove(self.cover_thumbnail_path)
+    end
+    super
   end
 
   def upload_response
