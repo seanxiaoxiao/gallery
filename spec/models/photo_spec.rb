@@ -17,6 +17,22 @@ describe Photo do
   it { should respond_to(:filename) }
   it { should be_valid }
 
+  it "After creating, the photo file exist" do
+    File.exist?(@photo.photo_path).should be_true
+  end
+
+  it "After creating, the grid thumbnail file exist" do
+    File.exist?(@photo.grid_thumbnail_path).should be_true
+  end
+
+  it "After creating, the cover thumbnail file exist" do
+    File.exist?(@photo.cover_thumbnail_path).should be_true
+  end
+
+  it "After creating, the slide thumbnail file exist" do
+    File.exist?(@photo.slide_thumbnail_path).should be_true
+  end
+
   it "After creating, the photo path should be correct" do
     @photo.photo_path.end_with?("public/upload/photo/1.png").should == true
   end
@@ -50,7 +66,7 @@ describe Photo do
   end
 
   it "After delete, all the files are deleted" do
-    @photo.delete()
+    @photo.destroy
     File.exist?(@photo.photo_path).should be_false
     File.exist?(@photo.slide_thumbnail_path).should be_false
     File.exist?(@photo.cover_thumbnail_path).should be_false

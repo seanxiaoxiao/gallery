@@ -32,11 +32,6 @@ class SlidesController < AdminController
     end
   end
 
-  # GET /slides/1/edit
-  def edit
-    @slide = Slide.find(params[:id])
-  end
-
   # PUT /slides/1
   # PUT /slides/1.json
   def update
@@ -81,7 +76,7 @@ class SlidesController < AdminController
       render :json => upload_response_list
     elsif request.get?
       uploaded = []
-      if (@slide.photo != nil)
+      if (!@slide.photo.blank?)
         uploaded << @slide.photo.upload_response
       end
       render :json => uploaded

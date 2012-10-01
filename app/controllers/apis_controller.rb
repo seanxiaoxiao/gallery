@@ -8,4 +8,12 @@ class ApisController < ApplicationController
     end
   end
 
+  def portfolio
+    portfolio = Portfolio.find(params[:portfolio_id])
+    respond_to do |format|
+      format.xml { render :xml => portfolio.to_xml(:include => :photos) }
+      format.json { render :json => portfolio.to_json(:include => :photos) }
+    end
+  end
+
 end

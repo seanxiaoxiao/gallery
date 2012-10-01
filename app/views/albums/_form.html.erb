@@ -1,13 +1,10 @@
 <%= form_for(@album) do |f| %>
   <% if @album.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
-
-      <ul>
+      <h3><%= pluralize(@album.errors.count, "error") %> prohibited this portfolio from being saved:</h3>
       <% @album.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <span class="label label-important"><%= msg %></span>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
@@ -17,7 +14,7 @@
   </div>
   <div class="field">
     <%= f.label :portfolio %><br />
-    <%= f.select :portfolio, Portfolio.select_options, :selected => params[:portfolio_id] %>
+    <%= f.select :portfolio_id, Portfolio.select_options, :selected => params[:portfolio_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

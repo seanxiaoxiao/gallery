@@ -72,9 +72,7 @@ class AlbumsController < AdminController
   # POST /albums
   # POST /albums.json
   def create
-    @album = Album.new()
-    @album.name = params[:album][:name]
-    @album.portfolio = Portfolio.find(params[:album][:portfolio])
+    @album = Album.new(params[:album])
 
     respond_to do |format|
       if @album.save

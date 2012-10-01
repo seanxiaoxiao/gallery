@@ -65,6 +65,7 @@ Gallery::Application.routes.draw do
   match 'album/(:id)/upload_photo' => 'albums#upload_photo', :via => [:post, :get]
   match 'slide/(:id)/upload_photo' => 'slides#upload_photo', :via => [:post, :get]
   match 'api/album/(:album_id)' => 'apis#album', :via => [:get]
+  match 'api/portfolio/(:portfolio_id)' => 'apis#portfolio', :via => [:get]
 
   # See how all your routes lay out with "rake routes"
 

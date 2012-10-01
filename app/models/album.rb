@@ -1,5 +1,5 @@
 class Album < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :portfolio_id
   belongs_to :portfolio
   has_many :photos, :dependent => :destroy
   accepts_nested_attributes_for :photos, :reject_if => lambda { |photos| photos.blank? }, :allow_destroy => true

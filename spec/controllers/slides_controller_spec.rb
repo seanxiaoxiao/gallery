@@ -20,9 +20,20 @@ require 'spec_helper'
 
 describe SlidesController do
 
+  include Devise::TestHelpers
+
   # This should return the minimal set of attributes required to create a valid
   # Slide. As you add validations to Slide, be sure to
   # update the return value of this method accordingly.
+  before do
+    @user = User.create(:email => 'seanxiaoxiao@hotmail.com', :password => '111111', :password_confirmation => '111111')
+    sign_in @user
+    @photo = Photo.new()
+    @photo.name = "photo"
+    file = fixture_file_upload("/test.png")
+    @photo.create_photo(file, "desc")
+  end
+
   def valid_attributes
     {}
   end
@@ -45,97 +56,8 @@ describe SlidesController do
   describe "GET show" do
     it "assigns the requested slide as @slide" do
       slide = Slide.create! valid_attributes
-      get :show, {:id => slide.to_param}, valid_session
+      get :show, {:id => slide.to_param}
       assigns(:slide).should eq(slide)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested slide as @slide" do
-      slide = Slide.create! valid_attributes
-      get :edit, {:id => slide.to_param}, valid_session
-      assigns(:slide).should eq(slide)
-    end
-  end
-
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Slide" do
-        expect {
-          post :create, {:slide => valid_attributes}, valid_session
-        }.to change(Slide, :count).by(1)
-      end
-
-      it "assigns a newly created slide as @slide" do
-        post :create, {:slide => valid_attributes}, valid_session
-        assigns(:slide).should be_a(Slide)
-        assigns(:slide).should be_persisted
-      end
-
-      it "redirects to the created slide" do
-        post :create, {:slide => valid_attributes}, valid_session
-        response.should redirect_to(Slide.last)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved slide as @slide" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Slide.any_instance.stub(:save).and_return(false)
-        post :create, {:slide => {}}, valid_session
-        assigns(:slide).should be_a_new(Slide)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Slide.any_instance.stub(:save).and_return(false)
-        post :create, {:slide => {}}, valid_session
-        response.should render_template("new")
-      end
-    end
-  end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested slide" do
-        slide = Slide.create! valid_attributes
-        # Assuming there are no other slides in the database, this
-        # specifies that the Slide created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Slide.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => slide.to_param, :slide => {'these' => 'params'}}, valid_session
-      end
-
-      it "assigns the requested slide as @slide" do
-        slide = Slide.create! valid_attributes
-        put :update, {:id => slide.to_param, :slide => valid_attributes}, valid_session
-        assigns(:slide).should eq(slide)
-      end
-
-      it "redirects to the slide" do
-        slide = Slide.create! valid_attributes
-        put :update, {:id => slide.to_param, :slide => valid_attributes}, valid_session
-        response.should redirect_to(slide)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the slide as @slide" do
-        slide = Slide.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Slide.any_instance.stub(:save).and_return(false)
-        put :update, {:id => slide.to_param, :slide => {}}, valid_session
-        assigns(:slide).should eq(slide)
-      end
-
-      it "re-renders the 'edit' template" do
-        slide = Slide.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Slide.any_instance.stub(:save).and_return(false)
-        put :update, {:id => slide.to_param, :slide => {}}, valid_session
-        response.should render_template("edit")
-      end
     end
   end
 
@@ -143,15 +65,49 @@ describe SlidesController do
     it "destroys the requested slide" do
       slide = Slide.create! valid_attributes
       expect {
-        delete :destroy, {:id => slide.to_param}, valid_session
+        delete :destroy, {:id => slide.to_param}
       }.to change(Slide, :count).by(-1)
     end
 
     it "redirects to the slides list" do
       slide = Slide.create! valid_attributes
-      delete :destroy, {:id => slide.to_param}, valid_session
+      delete :destroy, {:id => slide.to_param}
       response.should redirect_to(slides_url)
     end
+  end
+
+  describe "New slide" do
+    it "Save a slide after new a slide" do
+      get :new
+      assigns(:slide).should be_a(Slide)
+      assigns(:slide).should be_persisted
+    end
+  end
+
+  describe "Upload Image Slide Action" do
+    it "Return the image of the slide if get" do
+      slide = Slide.create!
+      slide.photo = @photo
+      get :upload_photo, { :id => slide.to_param }
+      response.body.should eq([@photo.upload_response].to_json)
+    end
+
+    it "Return empty array if the slide do not have a photo" do
+      slide = Slide.create!
+      get :upload_photo, { :id => slide.to_param }
+      response.body.should eq([].to_json)
+    end
+
+    it "Return the upload response of photo if upload one" do
+      slide = Slide.create!
+      post :upload_photo, { :id => slide.to_param, :files => [fixture_file_upload("/test.png")] }
+      response.body.should eq([slide.photo.upload_response].to_json)
+      Photo.any_instance.stub(:create_photo).and_return(false)
+      Photo.any_instance.stub(:save).and_return(false)
+
+      slide.photo.should be_persisted
+    end
+
   end
 
 end
