@@ -5,7 +5,7 @@ gem 'rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :group => :development
+gem 'mysql2'
 
 #Bundle for authentication
 gem 'devise'
