@@ -5073,10 +5073,6 @@ Galleria.addTheme = function( theme ) {
                 }
             });
         }
-
-        if ( !css ) {
-            Galleria.raise('No theme CSS loaded');
-        }
     } else {
 
         // pass

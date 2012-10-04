@@ -15,10 +15,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1">
     <%= stylesheet_link_tag :application %>
     <%= stylesheet_link_tag :home %>
-    <%= stylesheet_link_tag :style_768, 'media' => 'screen and (min-width: 768px)' %>
-    <%= stylesheet_link_tag :style_1024, 'media' => 'screen and (min-width: 1025px)' %>
-    <%= stylesheet_link_tag :style_1280, 'media' => 'screen and (min-width: 1281px)' %>
-    <%= stylesheet_link_tag :style_retina, 'media' => 'screen and (-webkit-min-device-pixel-ratio: 2)' %>
+    <%= stylesheet_link_tag "768/custom_small", 'media' => 'screen and (min-width: 768px)' %>
+    <%= stylesheet_link_tag "1024/custom_medium", 'media' => 'screen and (min-width: 1025px)' %>
+    <%= stylesheet_link_tag "galleria/galleria.classic" %>
     <%= csrf_meta_tag %>
   </head>
   <body>
@@ -52,7 +51,10 @@
         <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
       <% end %>
     </div>
-    <%= javascript_include_tag :application %>
+    <%= javascript_include_tag :jquery %>
+    <%= javascript_include_tag :application%>
+    <%= javascript_include_tag "galleria/galleria.classic.js" %>
+
   </body>
 </html>
 

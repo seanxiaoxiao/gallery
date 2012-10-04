@@ -10,17 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require jquery.ui.all
 //= require_directory ./jQuery-paging
-//= require_directory ./galleria
-
-//= require twitter/bootstrap
-
 //= require_directory ./slides
-
+//= require galleria/galleria-1.2.8.js
 //= require uploader/tmpl.js
 //= require uploader/load-image.min.js
 //= require uploader/jquery.iframe-transport.js

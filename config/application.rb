@@ -60,7 +60,17 @@ module Gallery
     config.assets.version = '1.0'
 
     # Precompiled Css
-    config.assets.precompile += ['home.css', 'style_768.css', 'style_1024.css', 'style_1280.css', 'style_retina.css']
+    config.assets.precompile += ['jquery.js']
+
+    config.assets.precompile += ['home.css']
+
+    config.assets.precompile += %w(768/*.css)
+
+    config.assets.precompile += %w(1024/*.css)
+
+    config.assets.precompile += ['galleria/galleria.classic.js']
+
+    config.assets.precompile += ['galleria/galleria.classic.css']
 
   end
 end

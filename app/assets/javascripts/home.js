@@ -6,6 +6,45 @@ var NANC = NANC || {};
 
 (function($) {
 
+    NANC.Galleria = function() {
+        Galleria.loadTheme('/assets/galleria/galleria.classic.js');
+
+        Galleria.run('#galleria', {
+            thumbQuality: true,
+            maxScaleRatio: 1,
+            minScaleRatio: 1,
+            height: 800,
+            showInfo: false,
+            width: 980
+        });
+    }
+
+    NANC.Slide = function() {
+        $('#slides').slides({
+            preload: false,
+            play: 5000,
+            pause: 2500,
+            hoverPause: true,
+            generatePagination: false,
+            animationStart: function(current){
+                $('.caption').animate({
+                    bottom:-35
+                },100);
+            },
+            animationComplete: function(current){
+                $('.caption').animate({
+                    bottom:0
+                },200);
+            },
+            slidesLoaded: function() {
+                $('.caption').animate({
+                    bottom:0
+                },200);
+            }
+        });
+
+    }
+
     NANC.SlideUpload = function() {
         'use strict';
 
@@ -150,7 +189,7 @@ var NANC = NANC || {};
         }
     };
 
-    NANC.portfolioMenu = function() {
+    NANC.PortfolioMenu = function() {
         var menu = $("#portfolio-menu");
         menu.menu();
         menu.attr("style", "display: none");
@@ -171,39 +210,17 @@ var NANC = NANC || {};
         });
     };
 
-    NANC.portfolioMenu.prototype = {
-
-    };
 
 }(jQuery));
 
 
 jQuery((function($) {
 
-    $('#slides').slides({
-        preload: true,
-        play: 5000,
-        pause: 2500,
-        hoverPause: true,
-        generatePagination: false,
-        animationStart: function(current){
-            $('.caption').animate({
-                bottom:-35
-            },100);
-        },
-        animationComplete: function(current){
-            $('.caption').animate({
-                bottom:0
-            },200);
-        },
-        slidesLoaded: function() {
-            $('.caption').animate({
-                bottom:0
-            },200);
-        }
-    });
+    new NANC.PortfolioMenu();
 
-    new NANC.portfolioMenu();
+    if ($('#slides').length == 1) {
+        new NANC.Slide();
+    }
 
     if ($('#slide-upload').length == 1) {
         NANC.SlideUploadObj = new NANC.SlideUpload();
@@ -217,21 +234,9 @@ jQuery((function($) {
         NANC.pagingObj = new NANC.PortfolioPage();
     }
 
-    if ($('#galleria').length > 0) {
-        // Load the classic theme
-        //Galleria.loadTheme('/assets/galleria/galleria.classic.js');
-
-        // Initialize Galleria
-        Galleria.run('#galleria', {
-            thumbQuality: true,
-            maxScaleRatio: 1,
-            minScaleRatio: 1,
-            height: 800,
-            showInfo: false,
-            width: 980
-        });
+    if ($('#galleria').length == 1) {
+        new NANC.Galleria();
     }
-
 
 })(jQuery));
 
