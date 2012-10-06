@@ -1,19 +1,15 @@
 <div class='container-16'>
   <div class='gallery-panel'>
     <div id="slides">
-      <div class="slides_container">
-        <% if @slides.count > 0 %>
+      <% if @slides.count > 0 %>
           <% @slides.each do |slide| %>
-            <% if slide.photo %>
-              <div class="slide">
-                <a href="javascript:void(0);" title="<%= slide.photo.name %>" target="_blank"><img src="<%= slide.photo.photo_url %>" alt="Slide 1"></a>
-              </div>
-            <% end %>
-          <% end %>
+          <a href="<%= slide.photo.photo_url %>">
+            <img data-title="<%= slide.photo.name %>"
+                 data-description=""
+                 src="">
+          </a>
         <% end %>
-      </div>
-      <a href="#" class="prev"><img src="/assets/arrow-prev.png"></a>
-      <a href="#" class="next"><img src="/assets/arrow-next.png"></a>
+      <% end %>
     </div>
   </div>
 </div>

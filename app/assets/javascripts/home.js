@@ -7,7 +7,6 @@ var NANC = NANC || {};
 (function($) {
 
     NANC.Galleria = function() {
-        Galleria.loadTheme('/assets/galleria/galleria.classic.js');
 
         Galleria.run('#galleria', {
             thumbQuality: true,
@@ -20,29 +19,17 @@ var NANC = NANC || {};
     }
 
     NANC.Slide = function() {
-        $('#slides').slides({
-            preload: false,
-            play: 5000,
-            pause: 2500,
-            hoverPause: true,
-            generatePagination: false,
-            animationStart: function(current){
-                $('.caption').animate({
-                    bottom:-35
-                },100);
-            },
-            animationComplete: function(current){
-                $('.caption').animate({
-                    bottom:0
-                },200);
-            },
-            slidesLoaded: function() {
-                $('.caption').animate({
-                    bottom:0
-                },200);
-            }
-        });
 
+        Galleria.run('#slides', {
+            maxScaleRatio: 1,
+            minScaleRatio: 1,
+            height: 620,
+            showInfo: false,
+            width: 980,
+            carousel: false,
+            showCounter: false,
+            thumbnails: "number"
+        });
     }
 
     NANC.SlideUpload = function() {
@@ -215,6 +202,8 @@ var NANC = NANC || {};
 
 
 jQuery((function($) {
+
+    Galleria.loadTheme('/assets/galleria/galleria.classic.js');
 
     new NANC.PortfolioMenu();
 

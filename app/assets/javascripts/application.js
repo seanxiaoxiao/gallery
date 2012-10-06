@@ -14,7 +14,6 @@
 //= require twitter/bootstrap
 //= require jquery.ui.all
 //= require_directory ./jQuery-paging
-//= require_directory ./slides
 //= require galleria/galleria-1.2.8.js
 //= require uploader/tmpl.js
 //= require uploader/load-image.min.js
