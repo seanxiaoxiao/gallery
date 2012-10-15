@@ -67,24 +67,27 @@
   width: 854px;
   height: 3px;
   margin: 15px auto 0px auto;
+  box-shadow:3px 3px 5px #777;
   background-image: url("/assets/long-divide.png");
 }
 
 .short-divide {
   display: block;
-  width: 123px;
+  width: 112px;
   height: 3px;
-  margin: 20px auto 15px auto;
+  margin: 50px auto 15px auto;
+  box-shadow:3px 3px 5px #777;
   background-image: url("/assets/short-divide.png");
 }
 
 .portfolio-name {
   font-family: "Rage Italic";
-  font-size: 48px;
+  font-size: 52px;
   display: block;
   line-height: 55px;
   color: #e8e8e8;
   text-shadow: 4px 4px 4px #777;
+  margin-bottom: 25px;
 }
 
 .album-list {
@@ -96,8 +99,8 @@
 
 .album-records {
   width: 854px;
-  height: 528px;
-  margin: 0 auto 20px auto;
+  height: 568px;
+  margin: 40px auto 20px auto;
   overflow: hidden;
   zoom: 1;
 }
@@ -106,10 +109,15 @@
   float: left;
   overflow: hidden;
   zoom: 1;
-  margin-left: 1.2em;
-  margin-right: 1.2em;
-  margin-bottom: 1em;
-  box-shadow:5px 5px 10px #444;
+  margin-left: 49px;
+  margin-bottom: 40px;
+  box-shadow:5px 5px 10px #777;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777')";
+}
+
+.album-record:nth-child(3n+1) {
+  margin-left: 0;
 }
 
 .album-record:hover {

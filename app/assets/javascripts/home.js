@@ -14,6 +14,7 @@ var NANC = NANC || {};
             minScaleRatio: 1,
             height: 800,
             showInfo: false,
+            history: true,
             width: 980
         });
     }
@@ -21,14 +22,16 @@ var NANC = NANC || {};
     NANC.Slide = function() {
 
         Galleria.run('#slides', {
+            autoplay: 7000,
             maxScaleRatio: 1,
             minScaleRatio: 1,
             height: 620,
             showInfo: false,
+            history: true,
             width: 980,
             carousel: false,
             showCounter: false,
-            thumbnails: "number"
+            thumbnails: false
         });
     }
 
@@ -178,7 +181,6 @@ var NANC = NANC || {};
 
     NANC.PortfolioMenu = function() {
         var menu = $("#portfolio-menu");
-        menu.menu();
         menu.attr("style", "display: none");
         menu.removeClass("hidden");
         $.each(menu.find("a"), function(index, element) {

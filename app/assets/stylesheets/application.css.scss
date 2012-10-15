@@ -41,6 +41,10 @@ body {
   height: 0;
 }
 
+header {
+  margin-bottom: 15px;
+}
+
 nav {
   width: 565px;
   height: 40px;
@@ -62,11 +66,24 @@ nav li {
 }
 
 #portfolio-menu li {
-  background-image: url("/assets/menu.png");
+  background-image: url("/assets/menuitem.png");
   display: block;
   width: 120px;
   height: 34px;
   font-family: "Garamond";
+}
+
+#portfolio-menu li a {
+  display: block;
+  margin: 7px auto 0;
+}
+
+#portfolio-menu li:first-child {
+  background-image: url("/assets/menuitem-first.png");
+}
+
+#portfolio-menu li:last-child {
+  background-image: url("/assets/menuitem-last.png");
 }
 
 #portfolio-menu a {
@@ -119,7 +136,7 @@ nav li {
 .banner {
   width: 467px;
   height: 51px;
-  margin: 35px auto 25px auto;
+  margin: 35px auto 30px auto;
   background-image: url('/assets/logo.png');
 }
 

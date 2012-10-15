@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Nanc's Gallery</title>
+    <title>NanC Gallery</title>
     <meta name="description" content="NanC Gallery">
     <meta name="author" content="Sean Lionheart">
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1">
@@ -43,9 +43,9 @@
             <li><%= link_to "", root_path, :class => "home-link"%></li>
             <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
               <% unless @portfolios == nil %>
-                <ul id="portfolio-menu" class="hidden">
+                <ul id="portfolio-menu">
                 <% for portfolio in @portfolios %>
-                  <li class=""><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
+                  <li class="portfolio-menus"><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
                 <% end %>
               </ul>
               <% end %>
