@@ -4,9 +4,17 @@
     <div class="portfolio-name">
       <%= @album.name %>
     </div>
+    <div class="album-action">
+      <% unless @album.prev == nil %>
+        <%= link_to "previous", home_album_path(@album.prev) %> |
+      <% end %>
+      <%= link_to "return", home_portfolio_path(@album.portfolio) %> |
+      <% unless @album.next == nil %>
+        <%= link_to "next", home_album_path(@album.next) %>
+      <% end %>
+    </div>
     <div class="long-divide"></div>
   </div>
-
   <div id="galleria">
     <% @album.photos.each do |photo| %>
       <a href="<%= photo.photo_url %>">

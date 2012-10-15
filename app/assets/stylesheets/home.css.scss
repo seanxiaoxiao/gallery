@@ -66,7 +66,7 @@
   display: block;
   width: 854px;
   height: 3px;
-  margin: 15px auto 0px auto;
+  margin: 0 auto;
   box-shadow:3px 3px 5px #777;
   background-image: url("/assets/long-divide.png");
 }
@@ -75,7 +75,7 @@
   display: block;
   width: 112px;
   height: 3px;
-  margin: 50px auto 15px auto;
+  margin: 50px auto 25px auto;
   box-shadow:3px 3px 5px #777;
   background-image: url("/assets/short-divide.png");
 }
@@ -87,7 +87,22 @@
   line-height: 55px;
   color: #e8e8e8;
   text-shadow: 4px 4px 4px #777;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.album-action {
+  padding-left: 90px;
+  text-align: left;
+  color: #f6f3ee;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.album-action a {
+  color: #f6f3ee;
+  font-family: "Garamond";
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .album-list {
@@ -112,11 +127,18 @@
   margin-left: 49px;
   margin-bottom: 40px;
   box-shadow:5px 5px 10px #777;
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777');
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777')";
+  filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#777777);
 }
 
 .album-record:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.album-record:first-child {
+  margin-left: 0;
+}
+
+.album-record:first-child + .album-record + .album-record + .album-record {
   margin-left: 0;
 }
 
@@ -169,6 +191,3 @@
   cursor: pointer;
   z-index: 0;
 }
-
-
-

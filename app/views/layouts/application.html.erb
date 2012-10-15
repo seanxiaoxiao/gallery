@@ -38,12 +38,12 @@
       <div class="banner">
         <%= link_to "", root_path %>
       </div>
-        <nav>
+        <div class="nav-bar">
           <ul>
             <li><%= link_to "", root_path, :class => "home-link"%></li>
             <li id="portfolio-li"><%= link_to "", root_path, :class => "portfolio-link"%>
               <% unless @portfolios == nil %>
-                <ul id="portfolio-menu">
+                <ul id="portfolio-menu" class="hidden">
                 <% for portfolio in @portfolios %>
                   <li class="portfolio-menus"><%= link_to portfolio.name, home_portfolio_path(portfolio.id) %></li>
                 <% end %>
@@ -54,7 +54,7 @@
             <li><%= link_to "", root_path, :class => "contact-link"%></li>
             <li><%= link_to "", root_path, :class => "about-link"%></li>
           </ul>
-        </nav>
+        </div>
     </header>
     <div class="container-16">
       <%= yield %>

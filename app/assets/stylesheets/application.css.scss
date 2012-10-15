@@ -25,7 +25,6 @@ body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
   background: transparent;
 }
 
-
 body {
   background-image: url("/assets/background.png");
   text-align: center;
@@ -45,13 +44,13 @@ header {
   margin-bottom: 15px;
 }
 
-nav {
+.nav-bar {
   width: 565px;
   height: 40px;
   margin: 0px auto;
 }
 
-nav li {
+.nav-bar li {
   display: block;
   float: left;
   margin-right: 0.1em;
@@ -66,24 +65,37 @@ nav li {
 }
 
 #portfolio-menu li {
-  background-image: url("/assets/menuitem.png");
+  background-color: #cecdc9;
   display: block;
+  margin-top: 1px;
   width: 120px;
   height: 34px;
-  font-family: "Garamond";
+  left: -9px;
+}
+
+#portfolio-menu li:hover {
+  color: #f6f3ee;
+  background-color: #b9b8b6;
 }
 
 #portfolio-menu li a {
+  color: #f6f3ee;
   display: block;
   margin: 7px auto 0;
+  font-family: "Garamond";
+}
+
+#portfolio-menu li:hover a {
+  color: #4a4c49;
+  text-decoration: none;
 }
 
 #portfolio-menu li:first-child {
-  background-image: url("/assets/menuitem-first.png");
+  border-radius: 8px 8px 0 0;
 }
 
 #portfolio-menu li:last-child {
-  background-image: url("/assets/menuitem-last.png");
+  border-radius: 0 0 8px 8px;
 }
 
 #portfolio-menu a {
@@ -152,7 +164,7 @@ nav li {
 @font-face {
   font-family: 'Rage Italic';
   src: url('/assets/rage.ttf');
-  src: local('☺'), url('/assets/rage.ttf') format('truetype');
+  src: local('/assets/rage.ttf'), url('/assets/rage.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

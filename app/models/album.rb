@@ -19,4 +19,12 @@ class Album < ActiveRecord::Base
     return {:id => self.id, :cover_url => self.cover.cover_thumbnail_url}
   end
 
+  def next
+    portfolio.albums.where("id > ?", id).first
+  end
+
+  def prev
+    portfolio.albums.where("id < ?", id).last
+  end
+
 end
