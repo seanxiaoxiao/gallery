@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f081272-e82b-4815-bfed-dd65b91d1ca7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/menuitem-first.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/menuitem-last.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/menuitem.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/1024/custom_medium-4d936e36fa5b11e74a44b9f78923e667.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/1024/custom_medium-4d936e36fa5b11e74a44b9f78923e667.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/1024/custom_medium.css" afterPath="" />
@@ -17,8 +14,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/about-link.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-439ff53666918eea4fb9bcc236bb6dc7.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-439ff53666918eea4fb9bcc236bb6dc7.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-a4271b615cf86cea13a3b8713635bda4.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-a4271b615cf86cea13a3b8713635bda4.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e073e36e56b4c99ccc869e4cb655faef.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e073e36e56b4c99ccc869e4cb655faef.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
@@ -27,7 +24,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/arrow-next.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/arrow-prev-e61685462fb8c5174d54e42785c65637.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/arrow-prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/background-dbac404516876023e7377d73e4897e7a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/background-2188addce59f9c275ebe0c023e921cd4.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/background.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog-link-7865e236eb71cc40729bc379e00fa97f.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog-link.png" afterPath="" />
@@ -49,8 +46,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/galleria/galleria.classic.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/gallery-panel-257d8c8454b94edbc02f071786fb96d8.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/gallery-panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-76627f1cf75f1d9c849221c663bb01b5.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-76627f1cf75f1d9c849221c663bb01b5.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-237576ed18f7da26c249ce7bb56e1a82.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-237576ed18f7da26c249ce7bb56e1a82.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-link-5ca0bf4267032f9538c7c60cc28d5b0a.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home-link.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/home.css" afterPath="" />
@@ -94,12 +91,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menu-ef67e3da505ce7347d5bfad8e82234fa.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem-ef67e3da505ce7347d5bfad8e82234fa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem-first-c939f6431106de5e331e4ac20f434ecb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem-first.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem-last-5cfd8ccf2c0d10661883642e6cf842a8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem-last.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/menuitem.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page-disable-8fdb65caa630101101e5940cda3e37af.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page-disable.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/page-enable-3663a073e84b234e2680fa956b156db2.png" afterPath="" />
@@ -120,13 +111,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/twitter/bootstrap/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/twitter/bootstrap/glyphicons-halflings-white.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/twitter/bootstrap/glyphicons-halflings.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/background.png" afterPath="$PROJECT_DIR$/app/assets/images/background.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/album.rb" afterPath="$PROJECT_DIR$/app/models/album.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/album.html.erb" afterPath="$PROJECT_DIR$/app/views/home/album.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="gallery.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -157,7 +142,7 @@
       <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="22" selection-start="460" selection-end="460" vertical-scroll-proportion="0.37037036">
+            <state line="14" column="22" selection-start="460" selection-end="460" vertical-scroll-proportion="0.030864198">
               <folding />
             </state>
           </provider>
@@ -279,53 +264,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="gallery">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="gallery">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="gallery">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="controllers">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -469,24 +407,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,21 +598,68 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gallery">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gallery">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gallery">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controllers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../source/fily" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../source/fily" />
     <property name="FullScreen" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1134,16 +1101,16 @@
       <method />
     </configuration>
     <list size="10">
-      <item index="0" class="java.lang.String" itemvalue="RSpec.Rspec" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: gallry" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: gallry" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.tslide-2st" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spslide-2c" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.slides_helper_spec" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.slides_spec" />
-      <item index="7" class="java.lang.String" itemvalue="RSpec.home_route_spec" />
-      <item index="8" class="java.lang.String" itemvalue="RSpec.slides_controller_spec" />
-      <item index="9" class="java.lang.String" itemvalue="RSpec.album_page_spec" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.slides_helper_spec" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.slides_spec" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.home_route_spec" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.slides_controller_spec" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.album_page_spec" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.Rspec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Production: gallry" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Development: gallry" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.tslide-2st" />
+      <item index="9" class="java.lang.String" itemvalue="Rake.spslide-2c" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1186,17 +1153,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21018651" sideWeight="0.21968617" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661406" sideWeight="0.7318117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27044475" sideWeight="0.7318117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26874116" sideWeight="0.71664274" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21018651" sideWeight="0.37089872" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281027" sideWeight="0.56671447" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2681883" sideWeight="0.8034433" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2681883" sideWeight="0.8034433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1262,100 +1229,72 @@
   <component name="editorHistoryManager">
     <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p286/gems/eventmachine-1.0.0/lib/eventmachine.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="525" column="0" selection-start="19690" selection-end="19690" vertical-scroll-proportion="0.33175355">
-          <folding />
-        </state>
+        <state line="525" column="0" selection-start="19690" selection-end="19690" vertical-scroll-proportion="0.33175355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/galleria/galleria.history.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/portfolio.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="172" selection-end="172" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
+        <state line="6" column="4" selection-start="172" selection-end="172" vertical-scroll-proportion="-3.75" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/slides_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="1092" selection-end="1098" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="16" selection-start="1092" selection-end="1098" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="30" selection-start="3211" selection-end="3211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="166" column="30" selection-start="3211" selection-end="3211" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="14" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="14" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="43" selection-start="341" selection-end="356" vertical-scroll-proportion="-10.625">
-          <folding />
-        </state>
+        <state line="17" column="43" selection-start="341" selection-end="356" vertical-scroll-proportion="-10.625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="18" selection-start="2204" selection-end="2228" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
+        <state line="50" column="18" selection-start="2204" selection-end="2228" vertical-scroll-proportion="-8.125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/album.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="47" selection-start="265" selection-end="280" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
+        <state line="8" column="47" selection-start="265" selection-end="280" vertical-scroll-proportion="-5.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/album.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="26" column="45" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="18" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="96" column="18" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/galleria/galleria.classic.css">
@@ -1367,7 +1306,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="460" selection-end="460" vertical-scroll-proportion="0.37037036">
+        <state line="14" column="22" selection-start="460" selection-end="460" vertical-scroll-proportion="0.030864198">
           <folding />
         </state>
       </provider>
