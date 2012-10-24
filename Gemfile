@@ -39,5 +39,4 @@ group :test do
 end
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 

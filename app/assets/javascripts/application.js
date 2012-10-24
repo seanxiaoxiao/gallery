@@ -12,7 +12,6 @@
 //
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require jquery.ui.all
 //= require_directory ./jQuery-paging
 //= require galleria/galleria-1.2.8.js
 //= require galleria/galleria.history.js
