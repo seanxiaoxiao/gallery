@@ -12,7 +12,11 @@
       <% unless @album.next == nil %>
         <%= link_to "next", home_album_path(@album.next) %>
       <% end %>
+      <div class="share-buttons pull-right">
+        <%= social_share_button_tag("我在NanC Gallery中的#{@album.portfolio.name}影集中发现一张非常好看的照片，希望你也可以来看看，同时我们可以关注一下@多啦C梦的口袋 http://www.weibo.com/nanc1 这个美女摄影师哦") %>
+      </div>
     </div>
+
     <div class="long-divide"></div>
   </div>
   <div id="galleria">

@@ -1,6 +1,15 @@
 //# Place all the behaviors and hooks related to the matching controller here.
 //# All this logic will automatically be available in application.js.
 //# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+//= require galleria/galleria-1.2.8.js
+//= require galleria/galleria.history.js
+//= require uploader/tmpl.js
+//= require uploader/load-image.min.js
+//= require uploader/jquery.iframe-transport.js
+//= require uploader/jquery.fileupload.js
+//= require uploader/jquery.fileupload-fp.js
+//= require uploader/jquery.fileupload-ui.js
+//= require uploader/locale.js
 
 var NANC = NANC || {};
 

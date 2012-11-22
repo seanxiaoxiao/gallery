@@ -9,6 +9,8 @@ gem 'mysql2'
 #Bundle for authentication
 gem 'devise'
 
+gem 'social-share-button'
+
 gem 'fileutils'
 
 gem 'rmagick'

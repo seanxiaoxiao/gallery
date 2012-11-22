@@ -12,17 +12,9 @@
 //
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require social-share-button
 //= require jquery.ui.all
 //= require_directory ./jQuery-paging
-//= require galleria/galleria-1.2.8.js
-//= require galleria/galleria.history.js
-//= require uploader/tmpl.js
-//= require uploader/load-image.min.js
-//= require uploader/jquery.iframe-transport.js
-//= require uploader/jquery.fileupload.js
-//= require uploader/jquery.fileupload-fp.js
-//= require uploader/jquery.fileupload-ui.js
-//= require uploader/locale.js
 //= require_directory .
 
 
