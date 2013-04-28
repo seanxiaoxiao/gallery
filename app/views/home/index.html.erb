@@ -3,10 +3,12 @@
     <div id="slides">
       <% if @slides.count > 0 %>
           <% @slides.each do |slide| %>
-          <a href="<%= slide.photo.photo_url %>">
-            <img data-title="<%= slide.photo.name %>"
+            <% if slide.photo %>
+            <a href="<%= slide.photo.photo_url %>">
+              <img data-title="<%= slide.photo.name %>"
                  data-description=""
                  src="">
+            <% end %>
           </a>
         <% end %>
       <% end %>

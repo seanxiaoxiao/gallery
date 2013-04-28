@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gallery.iml" filepath="$PROJECT_DIR$/.idea/gallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/controllers/controllers.iml" filepath="$PROJECT_DIR$/app/controllers/controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db/db.iml" filepath="$PROJECT_DIR$/db/db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/functional/functional.iml" filepath="$PROJECT_DIR$/test/functional/functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/helpers/helpers.iml" filepath="$PROJECT_DIR$/app/helpers/helpers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/models/models.iml" filepath="$PROJECT_DIR$/app/models/models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spec/spec.iml" filepath="$PROJECT_DIR$/spec/spec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/unit/unit.iml" filepath="$PROJECT_DIR$/test/unit/unit.iml" />
     </modules>
   </component>
 </project>
